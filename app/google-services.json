@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "71824456343",
+    "project_id": "leword-549be",
+    "storage_bucket": "leword-549be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71824456343:android:2b522056dab6df670c07d2",
+        "android_client_info": {
+          "package_name": "com.example.schedule.schedule_io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71824456343-eha1saua55539mch1ctcjjtuosme46f7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYh-5nNa2pWbN9pX39jqrnzaCqsgx68O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71824456343-eha1saua55539mch1ctcjjtuosme46f7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
