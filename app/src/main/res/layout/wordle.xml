@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:text="LeWord"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif"
+        android:text="10:28"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Menu"
+        android:text="Menu"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/guess"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@id/guess1"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@id/guess2"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/guess2"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_toEndOf="@id/guess3"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess4"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess6"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess4"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess7"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess4"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess7"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess4"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess8"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess9"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess1"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess9"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess7"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess9"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess12"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess14"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess9"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess8"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess15"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess10"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess16"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess16"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess10"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess17"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess17"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess18"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess10"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess17"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess19"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess10"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess18"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess20"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess19"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess21"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess21"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess19"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess22"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess22"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess23"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess19"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess22"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess19"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess23"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess24"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/keyboard"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="Q"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard2"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="W"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard3"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard2"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="E"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard4"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard3"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="R"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard5"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard4"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="T"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard6"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard5"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="Y"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard7"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard6"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="U"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard8"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard7"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="I"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard9"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard8"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="O"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard10"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard9"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="P"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:id="@+id/keyboard11"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="A"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard12"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard13"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard2"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="D"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard14"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard3"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="F"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard15"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard4"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="G"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard16"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard5"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="H"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard17"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard6"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="J"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard18"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard7"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="K"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard19"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard8"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="L"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:id="@+id/keyboard20"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="Enter"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard21"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="Z"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard22"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard2"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="X"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard23"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard3"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="C"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard24"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard4"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="V"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard25"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard5"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="B"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard26"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard6"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="N"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keyboard27"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard7"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:onClick="Guess"
+            android:padding="0dp"
+            android:text="M"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+
+            android:id="@+id/keyboard28"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@id/keyboard8"
+            android:adjustViewBounds="true"
+            android:background="@drawable/keyboard"
+            android:gravity="center"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/backspace"
+            android:onClick="backspace" />
+    </LinearLayout>
+
+</RelativeLayout>
