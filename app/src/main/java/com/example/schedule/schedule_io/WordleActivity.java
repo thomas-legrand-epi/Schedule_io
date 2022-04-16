@@ -229,7 +229,7 @@ public class WordleActivity extends AppCompatActivity {
         stage = 0;
         int i = 1;
         TextView current = (TextView)findViewById(ids[0]);
-        while(current.getText().toString()!="" && i<25){
+        while(current.getText().toString()!="" && i<30){
             current.setText("");
             current.setBackground(getDrawable(R.drawable.rounded_corner));
             current = (TextView)findViewById(ids[i]);
