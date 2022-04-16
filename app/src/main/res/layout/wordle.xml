@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingLeft="16dp"
@@ -396,12 +397,82 @@
         android:textColor="#000000"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/guess25"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess22"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess26"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess26"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess22"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@id/guess27"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess27"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess22"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess28"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess22"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess27"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guess29"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guess22"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@id/guess28"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:id="@+id/row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/guess24"
-        android:layout_marginTop="120dp"
+        android:layout_below="@id/isword"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true">
 
         <TextView
@@ -864,5 +935,28 @@
             app:srcCompat="@drawable/backspace"
             android:onClick="backspace" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/isword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess26"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:text=" " />
+
+    <Button
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/row3"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:onClick="pass"
+        android:text="Pass"
+        android:textColor="#FFFFFF"
+        tools:ignore="NotSibling" />
 
 </RelativeLayout>
