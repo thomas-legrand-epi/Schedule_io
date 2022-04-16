@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void Quit(View view) {finish();}
+
     public void Wordle(View view){
         setContentView(R.layout.wordle);
         TextView time = (TextView)findViewById(R.id.textView27);
