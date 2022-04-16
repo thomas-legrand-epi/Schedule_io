@@ -33,7 +33,7 @@ public class WordleActivity extends AppCompatActivity {
     }
 
     public void Menu(View view){
-        Intent switchActivityIntent = new Intent(this, MainActivity.class);
+        Intent switchActivityIntent = new Intent(this, MenuActivity.class);
         startActivity(switchActivityIntent);
     }
 

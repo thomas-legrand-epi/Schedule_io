@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white" >
+
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="241dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Menu"
+        android:text="Menu"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:text="LeWord"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textTuto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:text="Guess the word in 6 tries."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textTuto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Each guess must be a valid five-letter word. After each guess, the color of the tiles will change to show how close your guess was to the word."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/guessT"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="300dp"
+        android:layout_toStartOf="@id/guessT1"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="W"/>
+
+    <TextView
+        android:id="@+id/guessT1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="300dp"
+        android:layout_toStartOf="@id/guessT2"
+        android:background="@drawable/rounded_corner_yellow"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="O"/>
+
+    <TextView
+        android:id="@+id/guessT2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="R"/>
+
+    <TextView
+        android:id="@+id/guessT3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="300dp"
+        android:layout_toEndOf="@id/guessT2"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="D"/>
+
+    <TextView
+        android:id="@+id/guessT4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView26"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="40dp"
+        android:layout_toEndOf="@id/guessT3"
+        android:background="@drawable/rounded_corner_green"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="S" />
+
+    <TextView
+        android:id="@+id/textTuto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="The letter O is in the word and on the wrong sport."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textTuto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="The letter S is in the word and on the right sport."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textTuto5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="The letters W, R, D are not in the word."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+</RelativeLayout>
+

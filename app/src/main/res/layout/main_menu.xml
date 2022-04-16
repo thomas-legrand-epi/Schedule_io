@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white" >
+
+    <Button
+        android:id="@+id/buttonWordle"
+        android:layout_width="241dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Play"
+        android:text="Play"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonLeaderboard"
+        android:layout_width="241dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Leaderboard"
+        android:text="Leaderboard"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonTuto"
+        android:layout_width="241dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Tuto"
+        android:text="Tutorial"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:text="LeWord"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+</RelativeLayout>
