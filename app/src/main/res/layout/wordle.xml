@@ -731,6 +731,7 @@
             android:gravity="center"
             android:padding="0dp"
             android:text="Enter"
+            android:onClick="Enter"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="14sp"

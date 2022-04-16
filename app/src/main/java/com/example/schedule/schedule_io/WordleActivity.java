@@ -1,5 +1,6 @@
 package com.example.schedule.schedule_io;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -10,14 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WordleActivity extends AppCompatActivity {
 
+    String guess = "";
+    int stage = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
-    }
-
-    public void Wordle(View view){
         setContentView(R.layout.wordle);
         TextView time = (TextView)findViewById(R.id.textView27);
         new CountDownTimer(300000, 1000) {
@@ -33,7 +33,8 @@ public class WordleActivity extends AppCompatActivity {
     }
 
     public void Menu(View view){
-        setContentView(R.layout.activity_main);
+        Intent switchActivityIntent = new Intent(this, MainActivity.class);
+        startActivity(switchActivityIntent);
     }
 
     public void Guess(View view){
@@ -64,17 +65,20 @@ public class WordleActivity extends AppCompatActivity {
                 R.id.guess23,
                 R.id.guess24
         };
-        int i = 0;
-        TextView current = (TextView)findViewById(ids[i]);
-        TextView t = (TextView)view;
-        i++;
-        while(current.getText().toString()!="" && i<ids.length)
-        {
-            current = (TextView)findViewById(ids[i]);
+        int i = stage;
+        if(i<25) {
+            TextView current = (TextView) findViewById(ids[i]);
+            TextView t = (TextView) view;
             i++;
+            while (current.getText().toString() != "" && i < stage + 5) {
+                current = (TextView) findViewById(ids[i]);
+                i++;
+            }
+            if (current.getText().toString() == "") {
+                guess += current.getText().toString();
+                current.setText(t.getText().toString());
+            }
         }
-
-        current.setText(t.getText().toString());
     }
 
     public void backspace(View view){
@@ -105,14 +109,19 @@ public class WordleActivity extends AppCompatActivity {
                 R.id.guess23,
                 R.id.guess24
         };
-        int i = ids.length-1;
-        TextView current = (TextView)findViewById(ids[i]);
+        int i = 4;
+        TextView current = (TextView)findViewById(ids[stage+i]);
         i--;
         while(current.getText().toString()=="" && i>=0)
         {
-            current = (TextView)findViewById(ids[i]);
+            current = (TextView)findViewById(ids[stage+i]);
             i--;
         }
         current.setText("");
+    }
+
+    public void Enter(View view){
+        if(stage<25)
+            stage += 5;
     }
 }
