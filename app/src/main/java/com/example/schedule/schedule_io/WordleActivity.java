@@ -269,10 +269,10 @@ public class WordleActivity extends AppCompatActivity {
         for (int i = 0; i<5; i++){
             if(guess.charAt(i)==solution.charAt(i)){
                 for (int j = 0; j<5; j++){
-                    if (guess.charAt(i)==guess.charAt(j))
+                    if (guess.charAt(i)==guess.charAt(j) && rights[j]!=1)
                         rights[j]=-1;
-                    rights[i]=1;
                 }
+                rights[i]=1;
             }
         }
         return rights;
