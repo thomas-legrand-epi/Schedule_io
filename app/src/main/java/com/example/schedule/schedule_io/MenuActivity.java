@@ -27,8 +27,14 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.tuto);
     }
 
+    public void Leaderboard(View view) {
+        setContentView(R.layout.leaderboard);
+    }
+
     public void Play(View view){
         Intent switchActivityIntent = new Intent(this, WordleActivity.class);
         startActivity(switchActivityIntent);
     }
+
+
 }
