@@ -84,6 +84,7 @@ public class WordleActivity extends AppCompatActivity {
             R.id.keyboard27
     };
     int score = 0;
+    CountDownTimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,16 +92,18 @@ public class WordleActivity extends AppCompatActivity {
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.wordle);
         TextView time = (TextView)findViewById(R.id.textView27);
-        new CountDownTimer(300000, 1000) {
+        timer = new CountDownTimer(300000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 time.setText(millisUntilFinished/60000+":"+(millisUntilFinished % 60000)/1000);
             }
 
             public void onFinish() {
+                this.cancel();
                 finalscore();
             }
-        }.start();
+        };
+        timer.start();
         BufferedReader reader;
 
         try{
@@ -126,12 +129,14 @@ public class WordleActivity extends AppCompatActivity {
     }
 
     public void finalscore(){
+        timer.cancel();
         Intent switchActivityIntent = new Intent(this, ScoreActivity.class);
         switchActivityIntent.putExtra("score", score);
         startActivity(switchActivityIntent);
     }
 
     public void Menu(View view){
+        timer.cancel();
         Intent switchActivityIntent = new Intent(this, MenuActivity.class);
         startActivity(switchActivityIntent);
     }
@@ -174,7 +179,6 @@ public class WordleActivity extends AppCompatActivity {
         }
         else{
             TextView isword = (TextView) findViewById(R.id.isword);
-            isword.setText("");
             String guess = "";
             TextView current;
             for (int a = 0; a < 5; a++) {
@@ -184,7 +188,7 @@ public class WordleActivity extends AppCompatActivity {
             if (!Arrays.asList(words).contains(guess)) {
                 isword.setText("Not a word.");
             } else {
-                int[] times = In(guess);
+                int[] rights = right(guess);
                 TextView key;
                 for (int a = 0; a < 5; a++) {
                     current = (TextView) findViewById(ids[stage + a]);
@@ -195,15 +199,13 @@ public class WordleActivity extends AppCompatActivity {
                         i++;
                     }
                     key.setBackground(getDrawable(R.drawable.rounded_corner_dark));
-                    if (guess.charAt(a) == solution.charAt(a)) {
+                    if (rights[a]==1) {
                         current.setBackground(getDrawable(R.drawable.rounded_corner_green));
                         key.setBackground(getDrawable(R.drawable.rounded_corner_green));
-                        times[a]--;
                     }
-                    if (times[a] > 0) {
+                    if (rights[a]==0) {
                         current.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
                         key.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
-                        times[a]--;
                     }
                 }
 
@@ -247,14 +249,32 @@ public class WordleActivity extends AppCompatActivity {
         key.setBackground(getDrawable(R.drawable.keyboard));
     }
 
-    public int[] In(String guess){
-        int[] times = {0,0,0,0,0};
+    public int[] In(){
+        int[] times = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
         for (int a = 0; a<5; a++){
-            for (int b = 0; b<5; b++){
-                if(guess.charAt(a)==solution.charAt(b))
-                    times[a]++;
-            }
+            times[((int)solution.charAt(a))-97]++;
         }
         return times;
+    }
+
+    public int[] right(String guess){
+        int[] rights = {-1,-1,-1,-1,-1};
+        int[] times = In();
+        for (int i = 0; i<5; i++){
+            if(times[((int)guess.charAt(i))-97]>0) {
+                times[((int)guess.charAt(i))-97]--;
+                rights[i] = 0;
+            }
+        }
+        for (int i = 0; i<5; i++){
+            if(guess.charAt(i)==solution.charAt(i)){
+                for (int j = 0; j<5; j++){
+                    if (guess.charAt(i)==guess.charAt(j))
+                        rights[j]=-1;
+                    rights[i]=1;
+                }
+            }
+        }
+        return rights;
     }
 }
