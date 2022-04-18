@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -189,6 +190,7 @@ public class WordleActivity extends AppCompatActivity {
                 isword.setText("Not a word.");
             } else {
                 int[] rights = right(guess);
+                ArrayList<Integer> checked = new ArrayList<>();
                 TextView key;
                 for (int a = 0; a < 5; a++) {
                     current = (TextView) findViewById(ids[stage + a]);
@@ -198,14 +200,17 @@ public class WordleActivity extends AppCompatActivity {
                         key = findViewById(keyboard[i]);
                         i++;
                     }
-                    key.setBackground(getDrawable(R.drawable.rounded_corner_dark));
+                    if(!checked.contains(key.getId()))
+                        key.setBackground(getDrawable(R.drawable.rounded_corner_dark));
                     if (rights[a]==1) {
                         current.setBackground(getDrawable(R.drawable.rounded_corner_green));
                         key.setBackground(getDrawable(R.drawable.rounded_corner_green));
+                        checked.add(key.getId());
                     }
                     if (rights[a]==0) {
                         current.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
-                        key.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
+                        if(!checked.contains(key.getId()))
+                            key.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
                     }
                 }
 
@@ -262,17 +267,21 @@ public class WordleActivity extends AppCompatActivity {
         int[] times = In();
         for (int i = 0; i<5; i++){
             if(times[((int)guess.charAt(i))-97]>0) {
-                times[((int)guess.charAt(i))-97]--;
                 rights[i] = 0;
             }
         }
         for (int i = 0; i<5; i++){
             if(guess.charAt(i)==solution.charAt(i)){
-                for (int j = 0; j<5; j++){
-                    if (guess.charAt(i)==guess.charAt(j) && rights[j]!=1)
-                        rights[j]=-1;
-                }
+                times[((int)guess.charAt(i))-97]--;
                 rights[i]=1;
+                for (int j = 0; j<5; j++){
+                    if (times[((int)guess.charAt(j))-97]>0) {
+                        times[((int) guess.charAt(j)) - 97]--;
+                        rights[j] = 0;
+                    }
+                    if(guess.charAt(i)==guess.charAt(j) && rights[j]!=1)
+                        rights[j] = -1;
+                }
             }
         }
         return rights;
