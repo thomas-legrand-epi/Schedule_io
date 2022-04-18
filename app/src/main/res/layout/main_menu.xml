@@ -26,7 +26,7 @@
         android:layout_height="89dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="275dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/black"
         android:onClick="Leaderboard"
@@ -39,7 +39,7 @@
         android:layout_height="89dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/black"
         android:onClick="Tuto"
@@ -65,6 +65,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="SignOut"
-        android:text="Sign Out" />
+        android:text="Sign Out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="525dp"
+        android:layout_marginEnd="10dp"/>
 
 </RelativeLayout>
