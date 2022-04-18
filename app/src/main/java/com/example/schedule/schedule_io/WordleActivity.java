@@ -212,6 +212,7 @@ public class WordleActivity extends AppCompatActivity {
                         if(!checked.contains(key.getId()))
                             key.setBackground(getDrawable(R.drawable.rounded_corner_yellow));
                     }
+                    isword.setText(isword.getText().toString() + rights[a]);
                 }
 
                 if (guess.equals(solution)) {
@@ -220,6 +221,7 @@ public class WordleActivity extends AppCompatActivity {
                     isword.setText("Your score is : " + score);
                 }
                 else {
+                    isword.setText("Your score is : " + score);
                     stage += 5;
                 }
             }
@@ -265,22 +267,22 @@ public class WordleActivity extends AppCompatActivity {
     public int[] right(String guess){
         int[] rights = {-1,-1,-1,-1,-1};
         int[] times = In();
+        //every letter in both words
         for (int i = 0; i<5; i++){
             if(times[((int)guess.charAt(i))-97]>0) {
+                times[((int) guess.charAt(i)) - 97]--;
                 rights[i] = 0;
             }
         }
         for (int i = 0; i<5; i++){
-            if(guess.charAt(i)==solution.charAt(i)){
-                times[((int)guess.charAt(i))-97]--;
-                rights[i]=1;
-                for (int j = 0; j<5; j++){
-                    if (times[((int)guess.charAt(j))-97]>0) {
-                        times[((int) guess.charAt(j)) - 97]--;
-                        rights[j] = 0;
-                    }
-                    if(guess.charAt(i)==guess.charAt(j) && rights[j]!=1)
-                        rights[j] = -1;
+            //letters at the right place
+            if(guess.charAt(i)==solution.charAt(i)) {
+                times[((int) guess.charAt(i)) - 97]++;
+                rights[i] = 1;
+            }
+            for (int j = 0; j<5; j++){
+                if (rights[i]==1 && times[((int)guess.charAt(i))-97]<1) {
+                    rights[j] = -1;
                 }
             }
         }
