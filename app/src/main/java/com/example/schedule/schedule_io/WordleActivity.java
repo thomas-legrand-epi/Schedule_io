@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,9 +21,13 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class WordleActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
 
     String[] words = new String[5757];
     String solution = "";
@@ -92,6 +100,7 @@ public class WordleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.wordle);
+        mAuth = FirebaseAuth.getInstance();
         TextView time = (TextView)findViewById(R.id.textView27);
         timer = new CountDownTimer(300000, 1000) {
 
@@ -102,6 +111,8 @@ public class WordleActivity extends AppCompatActivity {
             public void onFinish() {
                 this.cancel();
                 finalscore();
+                updateScore(score);
+
             }
         };
         timer.start();
@@ -287,5 +298,13 @@ public class WordleActivity extends AppCompatActivity {
             }
         }
         return rights;
+    }
+
+    public void updateScore(int score){
+        DatabaseReference rootref = FirebaseDatabase.getInstance("https://leword-549be-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
+        Map<String,Object> map = new HashMap<>();
+        map.put("score",score);
+        rootref.child("Users").child(mAuth.getUid()).updateChildren(map);
+
     }
 }
