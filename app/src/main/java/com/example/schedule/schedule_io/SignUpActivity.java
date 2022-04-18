@@ -124,7 +124,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(task1 -> {
                                         if(task1.isSuccessful()){
-                                            Toast.makeText(RegisterUser.getContext(), "User has been registered", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(SignUpActivity.this, "User has been registered", Toast.LENGTH_LONG).show();
                                             progressBar.setVisibility(View.GONE);
 
 
@@ -132,7 +132,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                                         }
                                         else{
-                                            Toast.makeText(RegisterUser.getContext(),"User has not been registered",Toast.LENGTH_LONG).show();
+                                            Toast.makeText(SignUpActivity.this,"User has not been registered",Toast.LENGTH_LONG).show();
                                         }
                                         progressBar.setVisibility(View.GONE);
                                     });
@@ -140,7 +140,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                         }
                         else{
-                            Toast.makeText(RegisterUser.getContext(),"User has not been registered",Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUpActivity.this,"User has not been registered",Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
