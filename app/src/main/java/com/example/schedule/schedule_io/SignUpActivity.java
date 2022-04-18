@@ -21,11 +21,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView LeWord , RegisterUser;
+    private TextView LeWord , RegisterUser , Back_To_Log;
     private EditText editTextName, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
 
-    Intent LoginIntent = new Intent(this, LoginActivity.class);
+
 
     private FirebaseAuth mAuth;
 
@@ -42,6 +42,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         RegisterUser = (Button) findViewById(R.id.register_button);
         RegisterUser.setOnClickListener(this);
 
+        Back_To_Log = (Button) findViewById(R.id.Login_Redirect);
+        Back_To_Log.setOnClickListener(this);
+
         editTextName = (EditText) findViewById(R.id.editTextTextPersonName);
         editTextEmail = (EditText) findViewById(R.id.editTextTextEmailAddress2);
         editTextPassword = (EditText) findViewById(R.id.editTextTextPassword2);
@@ -56,8 +59,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
 
         switch (view.getId()){
-            case R.id.LeWord1:
-
+            case R.id.Login_Redirect:
+                Intent LoginIntent = new Intent(this, LoginActivity.class);
                 startActivity(LoginIntent);
                 break;
             case R.id.register_button:
@@ -123,7 +126,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                         if(task1.isSuccessful()){
                                             Toast.makeText(RegisterUser.getContext(), "User has been registered", Toast.LENGTH_LONG).show();
                                             progressBar.setVisibility(View.GONE);
-                                            startActivity(LoginIntent);
+
 
 
 
