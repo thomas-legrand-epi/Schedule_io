@@ -112,11 +112,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         if(task.isSuccessful()){
                             User user = new User(name,email);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
+                            FirebaseDatabase.getInstance("https://leword-549be-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(task1 -> {
                                         if(task1.isSuccessful()){
                                             Toast.makeText(RegisterUser.getContext(), "User has been registered", Toast.LENGTH_LONG).show();
+                                            progressBar.setVisibility(View.GONE);
+
 
                                         }
                                         else{
