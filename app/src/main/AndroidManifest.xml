@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Schedule_io">
         <activity
+            android:name=".LeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,14 +29,13 @@
         </activity>
         <activity
             android:name=".WordleActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MenuActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ScoreActivity"
-            android:exported="true"></activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>

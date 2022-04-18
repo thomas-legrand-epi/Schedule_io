@@ -10,6 +10,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +36,13 @@ public class MenuActivity extends AppCompatActivity {
     public void Play(View view){
         Intent switchActivityIntent = new Intent(this, WordleActivity.class);
         startActivity(switchActivityIntent);
+    }
+
+    public void SignOut(View view){
+        FirebaseAuth.getInstance().signOut();
+        Intent LoginIntent = new Intent(this, LoginActivity.class);
+        startActivity(LoginIntent);
+
     }
 
 
