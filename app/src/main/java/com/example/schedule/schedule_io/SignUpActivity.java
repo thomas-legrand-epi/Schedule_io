@@ -25,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private EditText editTextName, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
 
+    Intent LoginIntent = new Intent(this, LoginActivity.class);
+
     private FirebaseAuth mAuth;
 
     @Override
@@ -45,6 +47,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         editTextPassword = (EditText) findViewById(R.id.editTextTextPassword2);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+
+
+
     }
 
     @Override
@@ -52,7 +57,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         switch (view.getId()){
             case R.id.LeWord1:
-                Intent LoginIntent = new Intent(this, LoginActivity.class);
+
                 startActivity(LoginIntent);
                 break;
             case R.id.register_button:
@@ -118,6 +123,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                         if(task1.isSuccessful()){
                                             Toast.makeText(RegisterUser.getContext(), "User has been registered", Toast.LENGTH_LONG).show();
                                             progressBar.setVisibility(View.GONE);
+                                            startActivity(LoginIntent);
+
 
 
                                         }
