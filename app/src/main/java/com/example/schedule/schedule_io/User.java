@@ -10,10 +10,10 @@ public class User {
 
     }
 
-    public User(String fullName, String email){
+    public User(String fullName, String email, int Score){
         this.fullName = fullName;
         this.email = email;
-        this.score = 0;
+        this.score = Score;
 
 
     }

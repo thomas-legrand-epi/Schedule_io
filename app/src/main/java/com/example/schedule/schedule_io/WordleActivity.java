@@ -303,6 +303,7 @@ public class WordleActivity extends AppCompatActivity {
     public void updateScore(int score){
         DatabaseReference rootref = FirebaseDatabase.getInstance("https://leword-549be-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
         Map<String,Object> map = new HashMap<>();
+
         map.put("score",score);
         rootref.child("Users").child(mAuth.getUid()).updateChildren(map);
 
