@@ -30,7 +30,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void Leaderboard(View view) {
-        setContentView(R.layout.leaderboard);
+        Intent switchActivityIntent = new Intent(this, LeaderboardActivity.class);
+        startActivity(switchActivityIntent);
     }
 
     public void Play(View view){

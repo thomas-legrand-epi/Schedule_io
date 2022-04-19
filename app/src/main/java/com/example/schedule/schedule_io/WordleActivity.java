@@ -292,7 +292,7 @@ public class WordleActivity extends AppCompatActivity {
                 rights[i] = 1;
             }
             for (int j = 0; j<5; j++){
-                if (rights[i]==1 && times[((int)guess.charAt(i))-97]<1) {
+                if (guess.charAt(i)==guess.charAt(j) && rights[i]==1 && times[((int)guess.charAt(j))-97]<1) {
                     rights[j] = -1;
                 }
             }
